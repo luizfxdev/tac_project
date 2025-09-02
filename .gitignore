@@ -1,0 +1,2 @@
+# Ignore apenas dependências do Node.js
+node_modules/

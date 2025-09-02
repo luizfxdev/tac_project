@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAC - Inversor de Linhas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url('../assets/background.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>TAC - Inversor de Linhas</h1>
+        <p class="subtitle">Inverta as linhas do seu arquivo de texto</p>
+      </header>
+      <main class="main-content">
+        <section class="input-section">
+          <div class="file-input-wrapper">
+            <input type="file" id="file-input" accept=".txt,.log,.csv,.md" aria-label="Selecionar arquivo" />
+            <label for="file-input" class="file-input-label">
+              <span class="file-icon">📁</span>
+              <span class="file-text">Escolher arquivo...</span>
+            </label>
+            <div class="file-info" id="file-info"></div>
+          </div>
+          <div class="text-input-wrapper">
+            <label for="text-input" class="text-input-label">Ou digite o texto diretamente:</label>
+            <textarea
+              id="text-input"
+              placeholder="Digite o texto aqui..."
+              rows="5"
+              aria-label="Campo de texto"
+            ></textarea>
+          </div>
+        </section>
+        <section class="button-section">
+          <div class="button-container-3">
+            <span class="mas">PROCESSAR</span>
+            <button type="button" name="process" id="process-btn" aria-label="Processar arquivo">PROCESSAR</button>
+          </div>
+          <div class="button-container-4">
+            <span class="mas">RETORNAR</span>
+            <button type="button" name="clear" id="clear-btn" aria-label="Limpar campos">RETORNAR</button>
+          </div>
+        </section>
+        <section class="result-section" id="result-section">
+          <h2>Resultado</h2>
+          <div class="calculation-details" id="calculation-details"></div>
+          <div class="output-container">
+            <label for="output-text">Saída Esperada:</label>
+            <div class="output-wrapper">
+              <textarea id="output-text" readonly aria-label="Resultado processado"></textarea>
+              <button id="download-btn" class="download-btn" title="Baixar resultado">⬇️</button>
+            </div>
+          </div>
+        </section>
+        <div class="loading" id="loading">
+          <div class="loading-spinner"></div>
+          <p>Processando arquivo...</p>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

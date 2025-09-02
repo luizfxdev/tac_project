@@ -1,0 +1,41 @@
+{
+  "name": "tac-project",
+  "version": "1.0.0",
+  "description": "Sistema completo para inversão de linhas de arquivo texto (comando tac)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build:css": "sass --watch frontend/scss/button.scss:frontend/css/button.css frontend/scss/styles.scss:frontend/css/styles.css"
+  },
+  "keywords": [
+    "tac",
+    "file",
+    "reverse",
+    "lines",
+    "streaming"
+  ],
+  "author": "TAC Project",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "sass": "^1.69.5",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
