@@ -1,35 +1,49 @@
 # TAC - Inversor de Linhas
 
 Sistema completo para inversão de linhas de arquivos texto, implementando o comando Unix tac com interface web moderna e API REST robusta.
-🌟 Características
 
-✨ Interface Web Moderna: Design glassmorphism com animações e efeitos visuais
-🚀 Processamento Eficiente: Suporte a arquivos grandes usando streams (até 512MB)
-🔄 Duplo Modo: Upload de arquivos ou entrada de texto direto
-📊 Cálculo Detalhado: Mostra passo a passo do processamento
-💾 Download de Resultados: Baixe o arquivo processado
-🎯 API REST Completa: Endpoints para integração
-🧪 Testes Abrangentes: Cobertura completa com Jest
-📱 Responsivo: Funciona perfeitamente em dispositivos móveis
+## 🌟 Características
 
-📋 Pré-requisitos
+✨ **Interface Web Moderna**: Design glassmorphism com animações e efeitos visuais
+🚀 **Processamento Eficiente**: Suporte a arquivos grandes usando streams (até 512MB)
+🔄 **Duplo Modo**: Upload de arquivos ou entrada de texto direto
+📊 **Cálculo Detalhado**: Mostra passo a passo do processamento
+💾 **Download de Resultados**: Baixe o arquivo processado
+🎯 **API REST Completa**: Endpoints para integração
+🧪 **Testes Abrangentes**: Cobertura completa com Jest
+📱 **Responsivo**: Funciona perfeitamente em dispositivos móveis
+
+## 📋 Pré-requisitos
 
 Node.js 16.0 ou superior
 npm 7.0 ou superior
 Sistema Operacional: Windows, Linux, macOS
 
-🚀 Instalação Rápida
-1. Clone o Repositório
-bashgit clone <repository-url>
+## 🚀 Instalação Rápida
+### 1. Clone o Repositório
+```
+bash
+git clone <repository-url>
 cd tac-project
-2. Instale as Dependências
-bashnpm install
-3. Inicie o Servidor
-bashnpm start
-4. Acesse a Interface
+```
+### 2. Instale as Dependências
+```
+bash
+npm install
+```
+### 3. Inicie o Servidor
+```
+bash
+npm start
+```
+### 4. Acesse a Interface
+```
 Abra seu navegador e visite: http://localhost:3000
-🛠️ Comandos Disponíveis
-bash# Iniciar servidor em produção
+```
+## 🛠️ Comandos Disponíveis
+```
+bash
+# Iniciar servidor em produção
 npm start
 
 # Iniciar servidor em modo desenvolvimento (com auto-reload)
@@ -43,7 +57,10 @@ npm run test:watch
 
 # Compilar SCSS para CSS (se modificar estilos)
 npm run build:css
-📁 Estrutura do Projeto
+```
+
+## 📁 Estrutura do Projeto
+```
 tac-project/
 ├── assets/                    # Recursos estáticos
 │   └── background.png         # Imagem de fundo
@@ -66,53 +83,78 @@ tac-project/
 ├── uploads/                  # Diretório temporário (criado automaticamente)
 ├── package.json              # Configuração do projeto
 └── README.md                # Este arquivo
-🎮 Como Usar
-Interface Web
+```
+## 🎮 Como Usar
 
-Acesse http://localhost:3000 no seu navegador
-Escolha uma opção:
+### Interface Web
 
-📁 Upload de Arquivo: Clique em "Escolher arquivo..." e selecione um arquivo .txt, .log, .csv ou .md
-✏️ Texto Direto: Digite ou cole o texto no campo de entrada
+**Acesse**  ``` http://localhost:3000 ``` no seu navegador
+
+### Escolha uma opção:
+
+📁 **Upload de Arquivo**: Clique em "Escolher arquivo..." e selecione um arquivo .txt, .log, .csv ou .md
+✏️ **Texto Direto**: Digite ou cole o texto no campo de entrada
 
 
-Processe: Clique no botão "REVELAR" para inverter as linhas
-Visualize: Veja o resultado detalhado com cálculos passo a passo
-Download: Clique no botão ⬇️ para baixar o resultado
+**Processe**: Clique no botão "REVELAR" para inverter as linhas
+**Visualize**: Veja o resultado detalhado com cálculos passo a passo
+**Download**: Clique no botão ⬇️ para baixar o resultado
 
-Atalhos de Teclado
+### Atalhos de Teclado
 
-Ctrl + Enter: Processar entrada
-Esc: Limpar todos os campos
+**Ctrl + Enter**: Processar entrada
+**Esc**: Limpar todos os campos
 
-API REST
-Processar Arquivo via Upload
-bashcurl -X POST http://localhost:3000/api/tac \
+## API REST
+
+### Processar Arquivo via Upload
+```
+bash
+curl -X POST http://localhost:3000/api/tac \
   -F "file=@exemplo.txt"
-Processar Texto Direto
-bashcurl -X POST http://localhost:3000/api/tac/text \
+```
+### Processar Texto Direto
+```
+bash
+curl -X POST http://localhost:3000/api/tac/text \
   -H "Content-Type: application/json" \
   -d '{"text":"linha 1\nlinha 2\nlinha 3"}'
-Informações do Servidor
-bashcurl http://localhost:3000/api/info
-Status de Saúde
-bashcurl http://localhost:3000/api/health
-🔧 Configuração Avançada
-Variáveis de Ambiente
-bash# Porta do servidor (padrão: 3000)
+```
+### Informações do Servidor
+```
+bash
+curl http://localhost:3000/api/info
+```
+### Status de Saúde
+```
+bash
+curl http://localhost:3000/api/health
+```
+## 🔧 Configuração Avançada
+
+### Variáveis de Ambiente
+```
+bash
+# Porta do servidor (padrão: 3000)
 PORT=8080
 
 # Ambiente de execução
 NODE_ENV=production
-Configuração do Processador TAC
-javascriptconst { TacProcessor } = require('./backend/tac');
+```
+### Configuração do Processador TAC
+```
+javascript
+const { TacProcessor } = require('./backend/tac');
 
 const processor = new TacProcessor({
     encoding: 'utf8',                    // Codificação dos arquivos
     bufferSize: 64 * 1024,              // Tamanho do buffer (64KB)
     maxMemoryUsage: 512 * 1024 * 1024   // Limite de memória (512MB)
 });
-📊 Limites e Restrições
+```
+
+### 📊 Limites e Restrições
+
 RecursoLimiteTamanho máximo de arquivo50MB (upload)Tamanho máximo de texto10MB (entrada direta)Uso máximo de memória512MBFormatos suportados.txt, .log, .csv, .md, .jsonCodificaçãoUTF-8
 🧪 Executando Testes
 Testes Completos
