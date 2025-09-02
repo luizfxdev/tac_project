@@ -155,7 +155,14 @@ const processor = new TacProcessor({
 
 ### 📊 Limites e Restrições
 
-RecursoLimiteTamanho máximo de arquivo50MB (upload)Tamanho máximo de texto10MB (entrada direta)Uso máximo de memória512MBFormatos suportados.txt, .log, .csv, .md, .jsonCodificaçãoUTF-8
+| **Recurso** | **Limite** |
+| --- | --- |
+|Tamanho máximo de arquivo| 50MB (upload)|
+|Tamanho máximo de texto |10MB (entrada direta)|
+|Uso máximo de memória| 512MB|
+|Formatos suportados |.txt, .log, .csv, .md, .json|
+|Codificação | UTF-8|
+
 🧪 Executando Testes
 Testes Completos
 bashnpm test
