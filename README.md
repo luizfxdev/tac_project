@@ -163,39 +163,37 @@ const processor = new TacProcessor({
 |Formatos suportados |.txt, .log, .csv, .md, .json|
 |Codificação | UTF-8|
 
-🧪 Executando Testes
-Testes Completos
-bashnpm test
-Testes com Cobertura
-bashnpm test -- --coverage
-Testes Específicos
-bash# Apenas testes do algoritmo TAC
+### 🧪 Executando Testes
+
+**Testes Completos**
+```
+bash
+npm test
+```
+**Testes com Cobertura**
+```
+bash
+npm test -- --coverage
+```
+**Testes Específicos**
+```
+bash
+# Apenas testes do algoritmo TAC
 npm test -- tests/tac.test.js
 
 # Apenas testes do servidor
 npm test -- tests/server.test.js
-Testes em Modo Watch
-bashnpm run test:watch
-🐛 Solução de Problemas
-Erro: "Cannot find module"
-bash# Reinstale as dependências
-rm -rf node_modules package-lock.json
-npm install
-Erro: "Port already in use"
-bash# Altere a porta ou finalize o processo
-export PORT=3001
-npm start
-Erro: "Permission denied" (Linux/macOS)
-bash# Corrija permissões
-chmod +x backend/server.js
-Arquivo CSS não carrega
-bash# Recompile os estilos SCSS
-npm run build:css
-Testes falhando
-bash# Limpe cache do Jest
-npm test -- --clearCache
-🔍 Exemplos de Uso
-Exemplo 1: Arquivo de Log
+```
+**Testes em Modo Watch**
+```
+bash
+npm run test:watch
+```
+
+## 🔍 Exemplos de Uso
+
+### Exemplo 1: Arquivo de Log
+```
 Entrada:
 2024-01-01 10:00:00 INFO Started
 2024-01-01 10:00:01 WARN Warning
@@ -205,7 +203,9 @@ Saída:
 2024-01-01 10:00:02 ERROR Error
 2024-01-01 10:00:01 WARN Warning
 2024-01-01 10:00:00 INFO Started
-Exemplo 2: Lista de Tarefas
+```
+### Exemplo 2: Lista de Tarefas
+```
 Entrada:
 1. Primeira tarefa
 2. Segunda tarefa
@@ -215,7 +215,9 @@ Saída:
 3. Terceira tarefa
 2. Segunda tarefa
 1. Primeira tarefa
-Exemplo 3: Código com Comentários
+```
+### Exemplo 3: Código com Comentários
+```
 Entrada:
 // Início do arquivo
 function main() {
@@ -229,29 +231,31 @@ Saída:
     console.log("Hello");
 function main() {
 // Início do arquivo
-⚡ Performance
+```
+## ⚡ Performance
+
 O sistema foi otimizado para:
 
-Arquivos pequenos (< 64KB): Processamento em memória
-Arquivos grandes (64KB - 512MB): Processamento via streams
-Múltiplas requisições: Suporte a processamento concorrente
-Gestão de memória: Limpeza automática de recursos
+**Arquivos pequenos** (< 64KB): Processamento em memória
+**Arquivos grandes** (64KB - 512MB): Processamento via streams
+**Múltiplas requisições**: Suporte a processamento concorrente
+**Gestão de memória**: Limpeza automática de recursos
 
-Benchmarks (arquivo 100MB, 1M linhas)
+## Benchmarks (arquivo 100MB, 1M linhas)
 
 Tempo de processamento: ~3-5 segundos
 Uso de memória: < 100MB
 CPU: Uso moderado durante processamento
 
-🤝 Contribuindo
+## 🤝 Contribuindo
 
 Fork o projeto
-Crie uma branch para sua feature (git checkout -b feature/AmazingFeature)
-Commit suas mudanças (git commit -m 'Add some AmazingFeature')
-Push para a branch (git push origin feature/AmazingFeature)
+Crie uma branch para sua feature ``(git checkout -b feature/AmazingFeature)``
+Commit suas mudanças ``(git commit -m 'Add some AmazingFeature')``
+Push para a branch ``(git push origin feature/AmazingFeature)``
 Abra um Pull Request
 
-Padrões de Código
+## Padrões de Código
 
 Use ESLint para linting
 Escreva testes para novas funcionalidades
@@ -259,8 +263,9 @@ Mantenha cobertura de testes > 90%
 Documente APIs e funções públicas
 Use commit messages descritivos
 
-📝 Changelog
-v1.0.0 (2024-01-01)
+## 📝 Changelog
+
+v1.0.0 (01-09-2025)
 
 ✨ Implementação inicial do sistema TAC
 🎨 Interface web com design glassmorphism
@@ -269,13 +274,14 @@ v1.0.0 (2024-01-01)
 📱 Suporte responsivo
 💾 Processamento de arquivos grandes via streams
 
-📄 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
-👥 Autores
+### 📄 Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](https://mit-license.org) para detalhes.
 
-TAC Project Team - Desenvolvimento inicial
+### 👥 Autor
 
-🙏 Agradecimentos
+@luizfx.dev
+
+### 🙏 Agradecimentos
 
 Inspirado no comando Unix tac
 Comunidade Node.js pelos excelentes módulos
@@ -285,6 +291,4 @@ Usuários que fornecem feedback valioso
 
 
 
-
-
-Made with ❤️ and Node.js
+***Feito com ❤️ e Node.js***
